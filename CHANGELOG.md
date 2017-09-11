@@ -1,6 +1,29 @@
 Change Log
 ==========
 
+Version 0.10
+----------------------------
+* Updated dependencies
+* Added permission annotations
+* Minor improvements and cleanups in sample app
+
+Version 0.8.1
+----------------------------
+* Updated dependencies
+* Added fallback reverse geocode observable that uses web apis to obtain address
+* Added API to pass locales for reverse geocoding
+
+Version 0.8
+----------------------------
+* Updated dependencies to Google Play Services 8.1
+
+Version 0.7
+----------------------------
+
+* Removed ```final``` from methods in ```ReactiveLocationProvider``` to enable mockito mocking.
+* Updated dependencies.
+* Added support to fetch Place by id.
+
 Version 0.6
 ----------------------------
 

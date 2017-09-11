@@ -4,10 +4,10 @@ ReactiveLocation library for Android
 Small library that wraps Google Play Services API in brilliant [RxJava](https://github.com/ReactiveX/RxJava)
 ```Observables``` reducing boilerplate to minimum.
 
-Current stable version - 0.6
+Current stable version - 0.10
 ---------------
 
-**This version works with Google Play Services 7.3.+ and RxJava 1.0.+**
+**This version works with Google Play Services 9.4.0 and RxJava 1.2.+**
 
 What can you do with that?
 --------------------------
@@ -158,6 +158,7 @@ You can fetch current place or place suggestions using:
 
 * ```ReactiveLocationProvider.getCurrentPlace()```
 * ```ReactiveLocationProvider.getPlaceAutocompletePredictions()```
+* ```ReactiveLocationProvider.getPlaceById()```
 
 For more info see sample project and ```PlacesActivity```.
 
@@ -199,12 +200,10 @@ along with Google Play Services and RxJava.
 ```groovy
 dependencies {
     ...
-    compile 'pl.charmas.android:android-reactive-location:0.6@aar'
-    compile 'com.google.android.gms:play-services-location:7.3.0'
-    compile 'io.reactivex:rxjava:1.0.10'
-
-    //RxAndroid or NotRxAndroid is not required by library
-    compile 'io.reactivex:rxandroid:0.24.0'
+    compile 'pl.charmas.android:android-reactive-location:0.10@aar'
+    compile 'com.google.android.gms:play-services-location:9.4.0' //you can use newer GMS version if you need
+    compile 'com.google.android.gms:play-services-places:9.4.0'
+    compile 'io.reactivex:rxjava:1.2.0' //you can override RxJava version if you need
 }
 ```
 
@@ -217,7 +216,7 @@ following dependency:
 <dependency>
     <groupId>pl.charmas.android</groupId>
     <artifactId>android-reactive-location</artifactId>
-    <version>0.6</version>
+    <version>0.10</version>
     <type>aar</type>
 </dependency>
 ```
@@ -233,6 +232,12 @@ Places API requires API Key. Before running samples you need to create project o
 and obtain API Key using this [guide](https://developers.google.com/places/android/signup).
 Obtained key should be exported as gradle property named: ```REACTIVE_LOCATION_GMS_API_KEY``` for
 example in ```~/.gradle/gradle.properties```.
+
+
+References
+------
+
+If you need Google Fit library rxified please take a look at [RxFit](https://github.com/patloew/RxFit).
 
 License
 =======
