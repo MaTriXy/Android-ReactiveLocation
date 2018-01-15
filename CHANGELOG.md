@@ -1,6 +1,23 @@
 Change Log
 ==========
 
+Version 2.1
+----------------------------
+* Fix issues with emitting values when observable is disposed
+* Add option to auto reconnect to GMS when connection is suspended 
+
+Version 2.0
+----------------------------
+* Support for RxJava2
+
+Version 1.0
+----------------------------
+* Add Locale to geocode observable
+* Added option to pass GMS callback Handler while creating ReactiveLocationProvider
+* Bugfix: crash on unregistering activity BroadcastReceiver
+* Fixed memory leak in location observable
+* Checking if subscripion is still on before emitting values in few places
+
 Version 0.10
 ----------------------------
 * Updated dependencies
